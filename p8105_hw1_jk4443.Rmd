@@ -53,3 +53,5 @@ as.numeric(pull(prob1_df, factor_vec)) * pull(prob1_df, samp)
  We can multiply numeric data with the random sample but not factors.
 
 
+## Problem 2
+
