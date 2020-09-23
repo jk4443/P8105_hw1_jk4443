@@ -11,11 +11,11 @@ library(tidyverse)
 ```
 
 
-##Problem 1
+## Problem 1
 
-creating a data frame
+## Creating a data frame
 
-```{r}
+```{r create_df}
 prob1_df =  
    tibble(
     samp = rnorm(10),
@@ -25,18 +25,18 @@ prob1_df =
     )
 ```
 
-Taking the mean if each variable in the data frame.
+ Taking the mean of each variable in the data frame.
 
-```{r}
+```{r mean_pull_variables}
 mean(pull(prob1_df,samp))
 mean(pull(prob1_df, samp_gt_0))
 mean(pull(prob1_df, char_vec))
 mean(pull(prob1_df, factor_vec))
 ```
 
-We can take the mean of numbers and logical terms but not of characters and factors. 
+ We can take the mean of numbers and logical terms but not of characters and factors. 
 
-```{r}
+```{r conversion_to_numeric}
 as.numeric(pull(prob1_df,samp))
 as.numeric(pull(prob1_df, samp_gt_0))
 as.numeric(pull(prob1_df, char_vec))
@@ -50,6 +50,6 @@ as.numeric(pull(prob1_df,samp_gt_0)) * pull(prob1_df,samp)
 as.numeric(pull(prob1_df, factor_vec)) * pull(prob1_df, samp)
 ```
 
-We can multiply numneric data with the random sample but not factors.
+ We can multiply numeric data with the random sample but not factors.
 
 
