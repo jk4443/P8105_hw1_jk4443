@@ -34,7 +34,7 @@ mean(pull(prob1_df, char_vec))
 mean(pull(prob1_df, factor_vec))
 ```
 
-I can take the mean of numbers and logical terms but not of characters and factors. 
+We can take the mean of numbers and logical terms but not of characters and factors. 
 
 ```{r}
 as.numeric(pull(prob1_df,samp))
@@ -44,5 +44,12 @@ as.numeric(pull(prob1_df, factor_vec))
 ```
 
 
+```{r}
+as.numeric(pull(prob1_df,samp_gt_0)) * pull(prob1_df,samp)
+(pull(prob1_df, factor_vec)) * pull(prob1_df, samp)
+as.numeric(pull(prob1_df, factor_vec)) * pull(prob1_df, samp)
+```
+
+We can multiply numneric data with the random sample but not factors.
 
 
