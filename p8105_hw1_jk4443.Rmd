@@ -54,7 +54,7 @@ as.numeric(pull(prob1_df, factor_vec)) * pull(prob1_df, samp)
 
 
 ## Problem 2
-## The data set includes the palmer penguins dataset includes the following:
+
 
 ```{r}
 data( "penguins", package = "palmerpenguins")
@@ -65,11 +65,23 @@ summary(penguins)
 ```
 
 
+## The data set includes the palmer penguins dataset includes the following:
 The species and the island they are from, the bill length and depth in mm, the flipper length in mm, body mass, sex and their year.
-
 The data has `r nrow(palmerpenguins::penguins)` rows and
 The data has `r ncol(palmerpenguins::penguins)` columns.
 The mean flipper length is 200.9 mm
+
+# Plotting bill_length_mm vs flipper_length_mm
+
+```{r}
+library(tidyverse)
+penguins_df = tibble(
+  x = (penguins$bill_length_mm),
+  y = (penguins$flipper_length_mm),
+  z = (penguins$species)
+)
+ggplot(penguins_df, aes(x = x, y = y, color = z)) + geom_point()
+```
 
 
 
