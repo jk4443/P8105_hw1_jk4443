@@ -54,4 +54,17 @@ as.numeric(pull(prob1_df, factor_vec)) * pull(prob1_df, samp)
 
 
 ## Problem 2
+## The data set includes the palmer penguins dataset includes the following:
+
+The species and the island they are from, the bill length and depth in mm, the flipper length in mm, body mass, sex and their year.
+
+The data has `r nrow(palmerpenguins::penguins)` rows and
+The data has `r ncol(palmerpenguins::penguins)` columns
+
+
+ 
+
+
+
+
 
